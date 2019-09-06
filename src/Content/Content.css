@@ -1,0 +1,38 @@
+.Content_table{
+    margin-top: 10px;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+.Content_table > thead > tr{
+    background-color: var(--green_opacity2);
+}
+
+.Content_table > thead > tr > td {
+    padding: 3px;
+    border: 1px solid var(--green_main);
+    width: 150px;
+}
+
+.Content_table > thead > tr > td:first-child{
+    width: 70px;
+}
+
+.Content_table > thead > tr > td:nth-child(5){
+    width: 100px;
+}
+
+.Content_table > thead > tr > td > div {
+    display: inline-block;
+    text-align: center;
+}
+
+.Content_table > thead > tr > td > div:first-child{
+    width: 15px;
+    height: 15px;
+}
+
+.Content_table > thead > tr > td > div:last-child{
+    width: calc(100% - 15px - 6px);
+    height: 15px;
+}

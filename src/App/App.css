@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'PlayFair'
+}
+
+:root{
+    --sber_green: 85, 173, 87;
+    --green_main: rgb(var(--sber_green));
+    --green_opacity: rgba(var(--sber_green), 0.2);
+    --green_opacity2: rgba(var(--sber_green), 0.4);
+}
+
+@font-face{
+    font-family: 'PlayFair';
+    src: url('/PlayfairDisplay-Regular.ttf') format('ttf')
+}
+
+.Main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    /* background-color: rgb(220, 255, 220); */
+    background-color: var(--green_opacity);
+}
+
+.Main_AppTitle{
+    margin-top: 15px;
+    font-size: 40px;
+    font-weight: bold;
+    color: var(--green_main)
+}
+
+.Main_AppSignature{
+    font-size: 15px;
+    font-style: italic;
+}
