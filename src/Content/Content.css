@@ -2,37 +2,206 @@
     margin-top: 10px;
     border-collapse: collapse;
     font-size: 13px;
+    /* width: 1200px; */
+    margin: 10px;
 }
 
 .Content_table > thead > tr{
     background-color: var(--green_opacity2);
 }
 
-.Content_table > thead > tr > td {
-    padding: 3px;
-    border: 1px solid var(--green_main);
-    width: 150px;
+/**/
+/*Borders*/
+/**/
+
+:root {
+    --table_border: 1px solid var(--green_main);
 }
 
-.Content_table > thead > tr > td:first-child{
-    width: 70px;
+.Content_table {
+    border: var(--table_border);
 }
 
-.Content_table > thead > tr > td:nth-child(5){
-    width: 100px;
+.Content_table > * > tr > * {
+    border-left: var(--table_border);
 }
 
-.Content_table > thead > tr > td > div {
-    display: inline-block;
+.Content_table > * > tr > *:first-child {
+    border-left: none;
+}
+
+.Content_table > thead > tr:last-child > th {
+    border-top: var(--table_border);
+}
+
+.Content_table > tbody > tr > td {
+    border-top: var(--table_border);
+}
+
+.Content_table > tbody > tr:last-child > td {
+    border-bottom: var(--table_border);
+}
+
+/**/
+/*Cells sizes*/
+/**/
+
+.Content_table > * > tr > * {
+    padding: 0 3px;
+    vertical-align: middle;
+}
+
+.Content_table > thead > tr > th {
+    height: 35px;
+}
+
+.Content_table > tbody > tr > td {
+    height: 80px;
+}
+
+.Content_table > tbody > tr > td {
     text-align: center;
+    word-break: break-word;
 }
 
-.Content_table > thead > tr > td > div:first-child{
-    width: 15px;
-    height: 15px;
+.Content_table > tbody > tr > td:first-child{
+    width: 40px !important;
 }
 
-.Content_table > thead > tr > td > div:last-child{
-    width: calc(100% - 15px - 6px);
-    height: 15px;
+.Content_table > tbody > tr > td:nth-child(2){
+    width: 80px !important;
+}
+
+.Content_table > tbody > tr > td:nth-child(3){
+    width: 80px !important;
+}
+
+.Content_table > tbody > tr > td:nth-child(4){
+    width: 130px !important;
+}
+
+.Content_table > tbody > tr > td:nth-child(5){
+    width: 90px !important;
+}
+
+.Content_table > tbody > tr > td:nth-child(6){
+    width: 100px !important;
+}
+
+.Content_table > tbody > tr > td:nth-child(7){
+    width: 80px !important;
+}
+
+.Content_table > tbody > tr > td:nth-child(8){
+    width: 70px !important;
+}
+
+.Content_table > tbody > tr > td:nth-child(9){
+    width: 80px !important;
+}
+
+/* .Content_table > tbody > tr:first-child > td:last-child{
+    width: 300px;
+} */
+
+/**/
+
+.Content_table > thead > tr > th > div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+}
+
+.Content_table > thead > tr > th > div:first-child{
+    width: 20px;
+    float: left;
+    cursor: pointer;
+}
+
+.Content_table > thead > tr > th > div:last-child{
+    width: calc(100% - 20px);
+    float: right;
+    word-break: break-word;
+}
+
+.Sort{
+    display: flex;
+    flex-direction: column !important;
+    align-items: center;
+    justify-content: center;
+}
+
+:root{
+    --sortbtn_border_width: 10px;
+    --sortbtn_border_style: var(--sortbtn_border_width) solid var(--green_main);
+    --sortbtn_border_transparent: var(--sortbtn_border_width) solid transparent;
+    --sortbtn_noBorder_style: 0px solid var(--green_main);
+}
+
+.Sort > div{
+    width: 0;
+    height: 0;    
+    border-left: var(--sortbtn_border_transparent);
+    border-right: var(--sortbtn_border_transparent);
+    border-top: var(--sortbtn_noBorder_style);
+    border-bottom: var(--sortbtn_noBorder_style);
+    transition: 0.2s linear all;
+}
+
+.Sort_NotSelected > div:first-child{
+    border-bottom: var(--sortbtn_border_style);
+}
+
+.Sort_NotSelected > div:last-child{
+    border-top: var(--sortbtn_border_style);
+}
+
+.Sort_Ascending > div:first-child{
+    border-bottom: var(--sortbtn_border_style);
+}
+
+.Sort_Descending > div:last-child{
+    border-top: var(--sortbtn_border_style);
+}
+
+.Content_table > tfoot > tr > td > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Content_table > tfoot > tr > td > div > div {
+    margin: 0 10px;
+}
+
+/* .Content_table > tfoot > tr > td > div > div:first-child {
+    cursor: pointer;
+    user-select: none;
+}
+
+.Content_table > tfoot > tr > td > div > div:last-child {
+    cursor: pointer;
+    user-select: none;
+} */
+
+.Pagination_Dec > div {
+    border-left: none;
+    border-right: var(--sortbtn_border_style);
+    border-top: var(--sortbtn_border_transparent);
+    border-bottom: var(--sortbtn_border_transparent);
+}
+
+.Pagination_Inc > div {
+    border-right: none;
+    border-left: var(--sortbtn_border_style);
+    border-top: var(--sortbtn_border_transparent);
+    border-bottom: var(--sortbtn_border_transparent);
+}
+
+.Pagination_Inactive > div {
+    cursor: default;
+    opacity: 0.5;
 }

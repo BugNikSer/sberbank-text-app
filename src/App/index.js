@@ -45,7 +45,8 @@ class App extends Component {
       xmlHttp.send( null );
   
       return new Promise(resolve => {
-          resolve(xmlHttp.responseText)
+        //setTimeout(() => {resolve(xmlHttp.responseText)}, 2000)
+        resolve(xmlHttp.responseText)
       })
   }
 }
