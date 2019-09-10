@@ -4,6 +4,7 @@ import './PersonForm.css'
 
 class PersonForm extends Component {
     render() {
+        
         return (
             <div className="PersonForm">
                 <section>
@@ -44,7 +45,7 @@ class PersonForm extends Component {
 
 export default connect(
     state => ({
-        person: state.selectedPersonId ? state.people.find(p => p.id === state.selectedPersonId) : null
+        person: state.selectedPersonIdName ? state.people.find(p => p.id === state.selectedPersonIdName.id && p.firstName === state.selectedPersonIdName.firstName) : null
     }),
     dispatch => ({
         deselectPerson: () => {

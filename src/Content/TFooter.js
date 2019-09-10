@@ -47,11 +47,13 @@ export default connect(
                 (n === -1 && isDecreasePageBtnActive())
                 ||
                 (n === 1 && isIncreasePageBtnActive())
-            )
-            dispatch({
-                type: 'SET_PAGE',
-                payload: currentPageNumber + n
-            })
+            ) {
+                dispatch({
+                    type: 'SET_PAGE',
+                    payload: currentPageNumber + n
+                })
+            }
+
         }
     })
 )(TFooter)

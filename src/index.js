@@ -29,7 +29,7 @@ function people(state = {
     filter: '',
     showRowsOnPage: 10,
     currentPageNumber: 1,
-    selectedPersonId: null
+    selectedPersonIdName: null
 }, action) {
     switch (action.type) {
         case 'GET_PEOPLE': {
@@ -66,7 +66,7 @@ function people(state = {
         case 'SELECT_PERSON': {
             return {
                 ...state,
-                selectedPersonId: action.payload
+                selectedPersonIdName: action.payload
             }
             break;
         }
