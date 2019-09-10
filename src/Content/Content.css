@@ -2,7 +2,6 @@
     margin-top: 10px;
     border-collapse: collapse;
     font-size: 13px;
-    /* width: 1200px; */
     margin: 10px;
 }
 
@@ -56,7 +55,7 @@
 }
 
 .Content_table > tbody > tr > td {
-    height: 80px;
+    height: 40px;
 }
 
 .Content_table > tbody > tr > td {
@@ -65,39 +64,43 @@
 }
 
 .Content_table > tbody > tr > td:first-child{
-    width: 40px !important;
+    width: 50px !important;
 }
 
 .Content_table > tbody > tr > td:nth-child(2){
-    width: 80px !important;
-}
-
-.Content_table > tbody > tr > td:nth-child(3){
-    width: 80px !important;
-}
-
-.Content_table > tbody > tr > td:nth-child(4){
-    width: 130px !important;
-}
-
-.Content_table > tbody > tr > td:nth-child(5){
-    width: 90px !important;
-}
-
-.Content_table > tbody > tr > td:nth-child(6){
     width: 100px !important;
 }
 
+.Content_table > tbody > tr > td:nth-child(3){
+    width: 100px !important;
+}
+
+.Content_table > tbody > tr > td:nth-child(4){
+    width: 180px !important;
+}
+
+.Content_table > tbody > tr > td:nth-child(5){
+    width: 110px !important;
+}
+
+.Content_table > tbody > tr > td:nth-child(6){
+    width: 130px !important;
+}
+
 .Content_table > tbody > tr > td:nth-child(7){
-    width: 80px !important;
+    width: 130px !important;
 }
 
 .Content_table > tbody > tr > td:nth-child(8){
-    width: 70px !important;
+    width: 60px !important;
 }
 
 .Content_table > tbody > tr > td:nth-child(9){
-    width: 80px !important;
+    width: 60px !important;
+}
+
+.Content_table > tbody > tr > td:nth-child(10){
+    width: 220px !important;
 }
 
 /* .Content_table > tbody > tr:first-child > td:last-child{
@@ -106,32 +109,22 @@
 
 /**/
 
+.Content_table > thead > tr > th {
+    vertical-align: middle;
+    text-align: center;
+}
+
 .Content_table > thead > tr > th > div {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     text-align: center;
-    height: 100%;
 }
 
-.Content_table > thead > tr > th > div:first-child{
-    width: 20px;
-    float: left;
-    cursor: pointer;
-}
-
-.Content_table > thead > tr > th > div:last-child{
-    width: calc(100% - 20px);
-    float: right;
+.Content_table > thead > tr > th > div > div:last-child{
+    /* width: calc(100% - 20px); */
     word-break: break-word;
-}
-
-.Sort{
-    display: flex;
-    flex-direction: column !important;
-    align-items: center;
-    justify-content: center;
 }
 
 :root{
@@ -139,6 +132,17 @@
     --sortbtn_border_style: var(--sortbtn_border_width) solid var(--green_main);
     --sortbtn_border_transparent: var(--sortbtn_border_width) solid transparent;
     --sortbtn_noBorder_style: 0px solid var(--green_main);
+}
+
+.Sort{
+    display: flex;
+    flex-direction: column !important;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    margin-right: 10px;
+    height: 30px;
+    cursor: pointer;
 }
 
 .Sort > div{

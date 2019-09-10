@@ -1,0 +1,35 @@
+.Filter_section{
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.Filter_section > span {
+    color: var(--green_main);
+}
+
+.Filter_section > input {
+    margin: 0 10px;
+    height: 22px;
+    border: 1px solid var(--green_main);
+    outline: none;
+    border-radius: 3px;
+}
+
+.Filter_section > button{
+    border: 1px solid var(--green_main);
+    border-radius: 3px;
+    height: 24px;
+    padding: 2px 4px;
+    outline: none;
+    background-color: var(--green_opacity2);
+    transition: background-color 0.2s linear;
+    cursor: pointer;
+}
+
+.Filter_section > button:hover{
+    background-color: var(--green_main);
+}
+
+.Filter_section > button:active{
+    background-color: var(--green_opacity);
+}
