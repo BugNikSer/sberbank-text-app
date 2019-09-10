@@ -1,0 +1,41 @@
+.PersonForm{
+    position: fixed;
+    width: 600px;
+    padding: 10px;
+    top: 10px;
+    margin-left: 10px;
+    border: 1px solid var(--green_main);
+    border-radius: 3px;
+    background-color: var(--green2);
+}
+
+.PersonForm_Name{
+    display: inline-block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.PersonForm_Deselect{
+    display: inline-block;
+    float: right;
+    cursor: pointer;
+    user-select: none;
+}
+
+.PersonForm_Info{
+    display: inline-block;
+    width: 230px;
+    margin-right: 10px;
+    padding: 4px;
+    border: 1px solid var(--green_main);
+    border-radius: 3px;
+    float: left;
+}
+
+.PersonForm_Description{
+    display: inline-block;
+    width: 340px;
+    padding: 4px;
+    border: 1px solid var(--green_main);
+    border-radius: 3px;
+}

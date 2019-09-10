@@ -7,24 +7,29 @@ import App from './App';
 
 const store = createStore(people, applyMiddleware(thunk))
 
-const initialState = {
-    people : [],
-    selectedKey: null,
-    selectedKey2: null,
-    isSortByAscending: true,
-    filter: '',
-    showRowsOnPage: 10,
-    currentPageNumber: 1
-}
+// const initialState = {
+//     people : [],
+//     selectedKey: null,
+//     selectedKey2: null,
+//     isSortByAscending: true,
+//     filter: '',
+//     showRowsOnPage: 10,
+//     currentPageNumber: 1
+// }
 
 function people(state = {
-    people : [],
+    data: {
+        loaded: null,
+        total: null
+    },
+    people: [],
     selectedKey: null,
     selectedKey2: null,
     isSortByAscending: true,
     filter: '',
     showRowsOnPage: 10,
-    currentPageNumber: 1
+    currentPageNumber: 1,
+    selectedPersonId: null
 }, action) {
     switch (action.type) {
         case 'GET_PEOPLE': {
@@ -55,6 +60,13 @@ function people(state = {
             return {
                 ...state,
                 filter: action.payload
+            }
+            break;
+        }
+        case 'SELECT_PERSON': {
+            return {
+                ...state,
+                selectedPersonId: action.payload
             }
             break;
         }

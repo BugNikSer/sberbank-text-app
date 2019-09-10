@@ -2,9 +2,10 @@ import React, {Component} from 'react';
 import { connect } from 'react-redux';
 // import { connect } from 'react-redux';
 import './App.css';
+import Loading from '../Loading'
 import Filter from '../Filter'
 import Content from '../Content'
-import Loading from '../Loading'
+import PersonForm from '../PersonForm'
 
 class App extends Component {
     state = {
@@ -19,6 +20,7 @@ class App extends Component {
                     this.props.store && this.props.store.people && this.props.store.people.length !== 0 
                     ?
                     <section>
+                        {this.props.store.selectedPersonId ? (<PersonForm></PersonForm>) : ''}
                         <Filter></Filter>
                         <Content></Content>
                     </section>

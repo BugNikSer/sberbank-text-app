@@ -9,6 +9,8 @@
     --green_main: rgb(var(--sber_green));
     --green_opacity: rgba(var(--sber_green), 0.2);
     --green_opacity2: rgba(var(--sber_green), 0.4);
+    --green2: rgb(167, 212, 168);
+    --green3: rgb(221, 239, 221);
 }
 
 @font-face{

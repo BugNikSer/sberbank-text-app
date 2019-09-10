@@ -30,7 +30,9 @@ class TBody extends Component {
                     ).slice(
                         this.props.showRowsOnPage * (this.props.currentPageNumber - 1),
                         this.props.showRowsOnPage * (this.props.currentPageNumber)).map(person => 
-                        <tr key={'person-' + person.id}>
+                        <tr
+                            key={'person-' + person.id}
+                            onClick={() => this.props.selectPerson(person.id)}>
                             {
                                 Object.keys(person).map(p => 
                                         typeof person[p] == 'object' 
@@ -62,5 +64,9 @@ export default connect(
         currentPageNumber: state.currentPageNumber,
         filter: state.filter
     }),
-    dispatch => ({})
+    dispatch => ({
+        selectPerson: (id) => {
+            dispatch({type: 'SELECT_PERSON', payload: id})
+        }
+    })
 )(TBody)

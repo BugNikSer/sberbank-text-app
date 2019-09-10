@@ -8,6 +8,9 @@ export default function LoadingContent() {
             <div className="Loading_Glasses_Container">
                 <div className="Loading_Glasses"></div>
             </div>
+            <div>
+                <div></div>
+            </div>
         </div>
         
     )
